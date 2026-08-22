@@ -1,0 +1,17 @@
+You are implementing the DoraHacks submission for Somnia × DreamDEX Event Contracts Hackathon in THIS directory only.
+
+Contest: https://dorahacks.io/hackathon/event-contracts
+Submission window: 2026-08-25 to 2026-09-08 (deadline page 2026-09-09 02:00 CST)
+Team: Qidianyan Tech / yvzhou142857 / GitHub Qidianyan
+Read RULES.md first.
+Bot kit: https://github.com/somnia-chain/dreamdex-bot-kit
+Docs: https://docs.dreamdex.io/developers/event-contracts
+Builder: https://dreambot-builder.vercel.app/
+
+Win condition (share of $5,000 USDso; judged on innovation 20%, tech 25%, UX 20%, ecosystem 20%, demo 15%):
+- Working prototype using DreamDEX Event Contracts (not a generic prediction-market mock).
+- Build an AI trading / news-driven agent PLUS a simple consumer UI (mobile-first Up/Down or social prediction is OK if Event Contracts are real).
+- Mandatory for final DoraHacks submit: GitHub repo + 2–3 minute demo video script (write DEMO_SCRIPT.md; generate or stub video assets if you cannot render).
+- Testnet prototype. README how to get test STT.
+
+Do all implementation in this folder. Keep iterating until demo-ready. Do not stop at a plan.

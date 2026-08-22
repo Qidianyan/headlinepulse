@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>HeadlinePulse · DreamDEX Event Contracts</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="surface" class="phone">
+    <header class="top">
+      <div>
+        <p class="kicker">Somnia Shannon · Event Contracts</p>
+        <h1>HeadlinePulse</h1>
+      </div>
+      <span class="pill">dry-run</span>
+    </header>
+
+    <noscript class="note">JavaScript is required. Open this file with a browser, or run <code>npm run ui</code>.</noscript>
+    <p id="serve-note" class="note" hidden>
+      If this page is blank, serve the repo root (<code>npm run ui</code>) instead of opening a module bundle.
+    </p>
+
+    <section class="card wire">
+      <label for="news">News tape</label>
+      <textarea id="news" rows="3" maxlength="280"></textarea>
+      <button id="btn-read" type="button">Read the tape</button>
+    </section>
+
+    <p id="agent-banner" class="banner">Agent idle</p>
+
+    <section>
+      <h2>Live windows</h2>
+      <div id="markets" class="chips"></div>
+    </section>
+
+    <section class="sides">
+      <button id="btn-up" type="button">Up</button>
+      <button id="btn-down" type="button">Down</button>
+    </section>
+
+    <section class="stake-row">
+      <button id="stake-down" type="button">−</button>
+      <div>
+        <p class="kicker">Stake (contracts)</p>
+        <p id="stake">10</p>
+      </div>
+      <button id="stake-up" type="button">+</button>
+    </section>
+
+    <section class="card receipt">
+      <h2>Order intent</h2>
+      <p id="intent">Loading Event Contract book…</p>
+    </section>
+
+    <footer>
+      <p>Prices are Up probabilities in (0, 1). Down = 1 − Up. Keyed by marketId, never a recycled pool.</p>
+      <p>Qidianyan Tech · yvzhou142857 · GitHub Qidianyan</p>
+    </footer>
+  </main>
+
+  <script src="../src/constants.js"></script>
+  <script src="../src/math/raw.js"></script>
+  <script src="../src/math/tick-lot.js"></script>
+  <script src="../src/math/lifecycle.js"></script>
+  <script src="../src/policy/news-policy.js"></script>
+  <script src="../src/mapper/order-intent.js"></script>
+  <script src="../src/adapter/to-window.js"></script>
+  <script src="../src/adapter/load-windows.js"></script>
+  <script src="../src/adapter/orders.js"></script>
+  <script src="../src/adapter/redeem.js"></script>
+  <script src="fixtures.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+> headlinepulse@1.0.0 agent
+> node src/cli.js --human --news Bitcoin ETF inflows hit a record as BTC breaks out above resistance
+
+HeadlinePulse  ·  DreamDEX Event Contracts  ·  Shannon
+news: Bitcoin ETF inflows hit a record as BTC breaks out above resistance
+Up  BTC-22AUG26-1600/TUSDC#YES  px=0.55  qty=8
+up=0.55  down=0.45  (down = 1 − up)
+BTC Up from headline (etf inflow, inflows hit)
+mode: dry-run

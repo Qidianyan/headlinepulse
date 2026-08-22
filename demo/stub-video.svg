@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2744"/>
+      <stop offset="1" stop-color="#07090f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <text x="80" y="160" fill="#8b93a7" font-family="ui-sans-serif, system-ui" font-size="22" letter-spacing="4">SOMNIA × DREAMDEX EVENT CONTRACTS</text>
+  <text x="80" y="250" fill="#eef2ff" font-family="ui-sans-serif, system-ui" font-size="64" font-weight="700">HeadlinePulse</text>
+  <text x="80" y="320" fill="#7dff6a" font-family="ui-sans-serif, system-ui" font-size="28">News tape → Up / Down → on-chain CLOB intent</text>
+  <rect x="80" y="380" width="220" height="88" rx="16" fill="#7dff6a"/>
+  <text x="150" y="438" fill="#06200a" font-family="ui-sans-serif, system-ui" font-size="36" font-weight="800">UP</text>
+  <rect x="320" y="380" width="220" height="88" rx="16" fill="#ff5d7a"/>
+  <text x="368" y="438" fill="#2a0610" font-family="ui-sans-serif, system-ui" font-size="36" font-weight="800">DOWN</text>
+  <text x="80" y="540" fill="#8b93a7" font-family="ui-sans-serif, system-ui" font-size="20">Qidianyan Tech · yvzhou142857 · GitHub Qidianyan</text>
+  <text x="80" y="580" fill="#8b93a7" font-family="ui-sans-serif, system-ui" font-size="18">Stub frame · 2–3 min talk track in DEMO_SCRIPT.md · Shannon testnet dry-run</text>
+</svg>

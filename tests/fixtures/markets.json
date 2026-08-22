@@ -1,0 +1,147 @@
+{
+  "nowSec": 1787400000,
+  "stake": 10,
+  "news": "Bitcoin ETF inflows hit a record as BTC breaks out above resistance",
+  "windows": [
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000b1",
+      "symbol": "BTC-22AUG26-1600/TUSDC",
+      "upSymbol": "BTC-22AUG26-1600/TUSDC#YES",
+      "downSymbol": "BTC-22AUG26-1600/TUSDC#NO",
+      "asset": "BTC",
+      "cadence": "15m",
+      "question": "BTC 15m Up or Down vs the window open?",
+      "expirySec": 1787400900,
+      "tradingStartSec": 1787400000,
+      "onchainStatus": 1,
+      "indexerStatus": "Trading",
+      "upBid": 0.54,
+      "upAsk": 0.56,
+      "tickRaw": "1000",
+      "lotRaw": "1000000",
+      "minQtyRaw": "1000000",
+      "quoteDecimals": 6,
+      "poolAddress": "0x1111111111111111111111111111111111111111",
+      "nonce": "11"
+    },
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000b2",
+      "symbol": "BTC-22AUG26-1545/TUSDC",
+      "upSymbol": "BTC-22AUG26-1545/TUSDC#YES",
+      "downSymbol": "BTC-22AUG26-1545/TUSDC#NO",
+      "asset": "BTC",
+      "cadence": "15m",
+      "question": "BTC previous window (locked)",
+      "expirySec": 1787400010,
+      "tradingStartSec": 1787399100,
+      "onchainStatus": 2,
+      "indexerStatus": "Locked",
+      "upBid": 0.71,
+      "upAsk": 0.73,
+      "tickRaw": "1000",
+      "lotRaw": "1000000",
+      "minQtyRaw": "1000000",
+      "quoteDecimals": 6,
+      "poolAddress": "0x1111111111111111111111111111111111111111",
+      "nonce": "10"
+    },
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000e1",
+      "symbol": "ETH-22AUG26-1559/TUSDC",
+      "upSymbol": "ETH-22AUG26-1559/TUSDC#YES",
+      "downSymbol": "ETH-22AUG26-1559/TUSDC#NO",
+      "asset": "ETH",
+      "cadence": "15m",
+      "question": "ETH window about to lock",
+      "expirySec": 1787400015,
+      "tradingStartSec": 1787399115,
+      "onchainStatus": 1,
+      "indexerStatus": "Trading",
+      "upBid": 0.4,
+      "upAsk": 0.42,
+      "tickRaw": "1000",
+      "lotRaw": "1000000",
+      "minQtyRaw": "1000000",
+      "quoteDecimals": 6,
+      "poolAddress": "0x2222222222222222222222222222222222222222",
+      "nonce": "3"
+    },
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000e2",
+      "symbol": "ETH-22AUG26-1700/TUSDC",
+      "upSymbol": "ETH-22AUG26-1700/TUSDC#YES",
+      "downSymbol": "ETH-22AUG26-1700/TUSDC#NO",
+      "asset": "ETH",
+      "cadence": "1h",
+      "question": "ETH 1h Up or Down vs the window open?",
+      "expirySec": 1787403600,
+      "tradingStartSec": 1787400000,
+      "onchainStatus": 1,
+      "indexerStatus": "Trading",
+      "upBid": 0.48,
+      "upAsk": 0.5,
+      "tickRaw": "1000",
+      "lotRaw": "1000000",
+      "minQtyRaw": "1000000",
+      "quoteDecimals": 6,
+      "poolAddress": "0x2222222222222222222222222222222222222222",
+      "nonce": "4"
+    }
+  ],
+  "liveList": [
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000b1",
+      "status": "Trading"
+    }
+  ],
+  "finalizedList": [
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "symbol": "BTC-22AUG26-1500/TUSDC",
+      "status": "Finalized",
+      "asset": "BTC"
+    },
+    {
+      "marketId": "0x00000000000000000000000000000000000000000000000000000000000000fe",
+      "symbol": "ETH-22AUG26-1400/TUSDC",
+      "status": "Resolved",
+      "asset": "ETH"
+    }
+  ],
+  "unified": {
+    "BTC-22AUG26-1600/TUSDC": {
+      "id": "0x00000000000000000000000000000000000000000000000000000000000000b1",
+      "symbol": "BTC-22AUG26-1600/TUSDC",
+      "type": "binary",
+      "active": true,
+      "outcomes": [
+        { "symbol": "BTC-22AUG26-1600/TUSDC#YES", "label": "YES", "index": 0 },
+        { "symbol": "BTC-22AUG26-1600/TUSDC#NO", "label": "NO", "index": 1 }
+      ],
+      "info": {
+        "marketType": "BINARY",
+        "marketId": "0x00000000000000000000000000000000000000000000000000000000000000b1",
+        "asset": "BTC",
+        "question": "BTC 15m Up or Down vs the window open?",
+        "status": "Trading",
+        "expiry": "1787400900",
+        "tradingStart": "1787400000",
+        "interval": "15m",
+        "intervalSec": "900",
+        "quoteDecimals": 6,
+        "poolAddress": "0x1111111111111111111111111111111111111111",
+        "nonce": "11"
+      }
+    },
+    "SOMI/USDC": {
+      "id": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "symbol": "SOMI/USDC",
+      "type": "spot",
+      "active": true,
+      "info": {
+        "marketType": "SPOT",
+        "poolAddress": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HeadlinePulse demo storyboard</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #07090f; color: #eef2ff; font-family: ui-sans-serif, system-ui, sans-serif; }
+    .slide { display: none; height: 100%; padding: 8vw; box-sizing: border-box; }
+    .slide.on { display: flex; flex-direction: column; justify-content: center; }
+    .k { color: #8b93a7; letter-spacing: .12em; text-transform: uppercase; font-size: 14px; }
+    h1 { font-size: clamp(32px, 6vw, 72px); margin: 12px 0; letter-spacing: -.04em; }
+    p { font-size: clamp(18px, 2.4vw, 28px); max-width: 18em; color: #c9d0e3; }
+    .up { color: #7dff6a; } .down { color: #ff5d7a; }
+  </style>
+</head>
+<body>
+  <section class="slide on"><p class="k">0:00 problem</p><h1>Headlines move views. Windows expire.</h1><p>Traders read ETF tape, then miss the Event Contract print.</p></section>
+  <section class="slide"><p class="k">0:20 solution</p><h1>HeadlinePulse</h1><p>News-driven agent on the real DreamDEX binary CLOB. Status 1. Tick. Lot. marketId.</p></section>
+  <section class="slide"><p class="k">0:45 product</p><h1>Agent + phone Up/Down</h1><p>Same mapper. Dry-run default. Shannon when you have STT.</p></section>
+  <section class="slide"><p class="k">1:05 demo</p><h1 class="up">BTC Up</h1><p>“ETF inflows hit a record as BTC breaks out.” YES on the Trading 15m window.</p></section>
+  <section class="slide"><p class="k">1:50 demo</p><h1 class="down">ETH Down</h1><p>Selloff + hack → buy NO. Dying windows skipped. Finalized list for redeem.</p></section>
+  <section class="slide"><p class="k">2:15 vision</p><h1>The tape is the signal.</h1><p>Qidianyan Tech · Event Contracts are the venue.</p></section>
+  <script>
+    var slides = [].slice.call(document.querySelectorAll(".slide"));
+    var i = 0;
+    setInterval(function () {
+      slides[i].classList.remove("on");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("on");
+    }, 25000);
+  </script>
+</body>
+</html>

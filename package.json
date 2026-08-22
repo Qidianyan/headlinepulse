@@ -1,0 +1,29 @@
+{
+  "name": "headlinepulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "News-driven DreamDEX Event Contracts agent + mobile Up/Down UI for Somnia Shannon.",
+  "type": "module",
+  "main": "src/cli.js",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "agent": "node src/cli.js",
+    "ui": "node src/serve-ui.js",
+    "discover": "node src/try-testnet.js"
+  },
+  "keywords": [
+    "somnia",
+    "dreamdex",
+    "event-contracts",
+    "prediction-markets"
+  ],
+  "author": "Qidianyan Tech / yvzhou142857 / GitHub Qidianyan",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@somnia-chain/markets-sdk": "^0.28.1",
+    "viem": "^2.55.19"
+  }
+}
