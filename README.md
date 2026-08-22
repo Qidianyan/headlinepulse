@@ -1,12 +1,12 @@
 # HeadlinePulse
 
-News-driven AI trading agent + mobile-first **Up / Down** UI for **DreamDEX Event Contracts** on **Somnia Shannon** (chain id `50312`).
+贴一条标题。代理人选 BTC 或 ETH、Up 或 Down，在 **DreamDEX Event Contracts**（Somnia Shannon，`50312`）正在 Trading 的窗口上挂买单。手机宽也能点。
 
 Team: **Qidianyan Tech** / **yvzhou142857** / GitHub **Qidianyan**
 
 Contest: [Somnia × DreamDEX Event Contracts Hackathon](https://dorahacks.io/hackathon/event-contracts)
 
-This is not a generic prediction-market mock and it does not use the DreamDEX **spot** HTTP API (`/v0/markets`). Orders go through `@somnia-chain/markets-sdk` ≥ 0.25.0 (this tree pins **0.28.1**) against the binary Event Contract book.
+下单走 `@somnia-chain/markets-sdk` **0.28.1** 的 Event Contract 盘，不走 DreamDEX 现货 `/v0/markets`。
 
 ## What it does
 
@@ -47,7 +47,7 @@ npm run ui
 
 ## Demo
 
-See [`DEMO_SCRIPT.md`](./DEMO_SCRIPT.md) (2–3 minute talk track) and [`demo/`](./demo/) (storyboard + stub video assets).
+走查：[`DEMO_SCRIPT.md`](./DEMO_SCRIPT.md)。素材：[`demo/`](./demo/)。
 
 ## Stack
 

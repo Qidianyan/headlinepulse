@@ -1,15 +1,10 @@
 # Demo assets
 
-DoraHacks wants a 2–3 minute video. This folder is the **stub pack** if a renderer is not available in the build environment.
+`headlinepulse.mp4` 是本机 `npm run ui` 的屏录，约 2 分 28 秒。评委看到的是手机宽 UI：吃进标题、Up/Down、stake、第二条 ETH 新闻。
 
-| File | Use |
-| --- | --- |
-| [../DEMO_SCRIPT.md](../DEMO_SCRIPT.md) | Timed talk track (problem → solution → product → demo → vision) |
-| [slides.html](slides.html) | Auto-advancing 150s storyboard; screen-record this + the live UI |
-| [stub-video.svg](stub-video.svg) | Vector poster / first frame |
-| [title-card.jpg](title-card.jpg) | 16:9 title card |
-| [phone-mock.jpg](phone-mock.jpg) | Phone-frame concept art |
-| [ui-screenshot.png](ui-screenshot.png) | Live UI after tapping Down |
-| [STUB_VIDEO.md](STUB_VIDEO.md) | How to record the real mp4 |
+本地重录：
 
-Open `slides.html` in a browser (or via `npm run ui` at `/demo/slides.html`) and screen-record while reading the script.
+```bash
+npm run ui
+# 浏览器打开 http://127.0.0.1:4173/ui/
+```

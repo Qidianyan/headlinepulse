@@ -77,7 +77,7 @@
     const intent = UI.state.intent;
     if (!box) return;
     if (!intent || !intent.ok) {
-      box.textContent = (intent && intent.reason) || "Read a headline or tap Up / Down.";
+      box.textContent = (intent && intent.reason) || "贴一条标题，或点 Up / Down。";
       return;
     }
     box.innerHTML =

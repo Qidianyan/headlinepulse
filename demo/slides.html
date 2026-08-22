@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HeadlinePulse demo storyboard</title>
+  <title>HeadlinePulse walkthrough</title>
   <style>
-    html, body { margin: 0; height: 100%; background: #07090f; color: #eef2ff; font-family: ui-sans-serif, system-ui, sans-serif; }
-    .slide { display: none; height: 100%; padding: 8vw; box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #111; color: #f3f1ea; font-family: "SF Pro Text", "PingFang SC", sans-serif; }
+    .slide { display: none; height: 100%; padding: 7vw; box-sizing: border-box; }
     .slide.on { display: flex; flex-direction: column; justify-content: center; }
-    .k { color: #8b93a7; letter-spacing: .12em; text-transform: uppercase; font-size: 14px; }
-    h1 { font-size: clamp(32px, 6vw, 72px); margin: 12px 0; letter-spacing: -.04em; }
-    p { font-size: clamp(18px, 2.4vw, 28px); max-width: 18em; color: #c9d0e3; }
-    .up { color: #7dff6a; } .down { color: #ff5d7a; }
+    .k { color: #9a9588; font-size: 14px; letter-spacing: .08em; }
+    h1 { font-size: clamp(28px, 5vw, 56px); margin: 10px 0; }
+    p, pre { font-size: clamp(16px, 2.1vw, 24px); max-width: 22em; color: #d8d4c8; }
+    pre { font-family: ui-monospace, Menlo, monospace; font-size: 16px; white-space: pre-wrap; }
+    .up { color: #6fbf73; }
   </style>
 </head>
 <body>
-  <section class="slide on"><p class="k">0:00 problem</p><h1>Headlines move views. Windows expire.</h1><p>Traders read ETF tape, then miss the Event Contract print.</p></section>
-  <section class="slide"><p class="k">0:20 solution</p><h1>HeadlinePulse</h1><p>News-driven agent on the real DreamDEX binary CLOB. Status 1. Tick. Lot. marketId.</p></section>
-  <section class="slide"><p class="k">0:45 product</p><h1>Agent + phone Up/Down</h1><p>Same mapper. Dry-run default. Shannon when you have STT.</p></section>
-  <section class="slide"><p class="k">1:05 demo</p><h1 class="up">BTC Up</h1><p>“ETF inflows hit a record as BTC breaks out.” YES on the Trading 15m window.</p></section>
-  <section class="slide"><p class="k">1:50 demo</p><h1 class="down">ETH Down</h1><p>Selloff + hack → buy NO. Dying windows skipped. Finalized list for redeem.</p></section>
-  <section class="slide"><p class="k">2:15 vision</p><h1>The tape is the signal.</h1><p>Qidianyan Tech · Event Contracts are the venue.</p></section>
+  <section class="slide on"><p class="k">奇点砚 · Somnia Event Contracts</p><h1>HeadlinePulse</h1><p>ETF 新闻来了，15 分钟窗口还在 Trading。人还在换单位，盘已经过了。</p></section>
+  <section class="slide"><p class="k">实际 CLI 回执</p><pre>Up  BTC-22AUG26-1600/TUSDC#YES
+px=0.55  qty=8
+up=0.55  down=0.45
+mode: dry-run</pre></section>
+  <section class="slide"><p class="k">同一 mapper</p><h1 class="up">手机宽 Up / Down</h1><p>SDK 0.28.1。状态必须是 Trading (1)。Down = 1 − Up。键是 marketId。</p></section>
+  <section class="slide"><p class="k">仓库</p><h1>github.com/Qidianyan/headlinepulse</h1><p>提交窗 8/25 起。有 STT 再把 DRY_RUN 关掉。</p></section>
   <script>
     var slides = [].slice.call(document.querySelectorAll(".slide"));
     var i = 0;
@@ -28,7 +30,7 @@
       slides[i].classList.remove("on");
       i = (i + 1) % slides.length;
       slides[i].classList.add("on");
-    }, 25000);
+    }, 5000);
   </script>
 </body>
 </html>
