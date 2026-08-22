@@ -1,7 +1,7 @@
 # DoraHacks BUIDL — HeadlinePulse
 
 **Contest:** [Somnia × DreamDEX Event Contracts Hackathon](https://dorahacks.io/hackathon/event-contracts)  
-**Team:** Qidianyan Tech / yvzhou142857 / GitHub Qidianyan  
+**Team:** Qidianyan Tech / yvzhou142857 / GitHub [Qidianyan/headlinepulse](https://github.com/Qidianyan/headlinepulse)  
 **Submission window:** 2026-08-25 to 2026-09-08 (page deadline 2026-09-09 02:00 CST)
 
 ## Title
