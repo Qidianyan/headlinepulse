@@ -19,7 +19,7 @@
 
 - [x] `npm test` 22/22 通过（2026-08-24）
 - [x] GitHub Release `demo-2026-08-22` 含 `headlinepulse.mp4`
-- [ ] `SUBMISSION.md` 视频链接已 push 到 GitHub（本地有改动未提交）
+- [x] `SUBMISSION.md` 视频链接已 push 到 GitHub（`2c38a36`）
 - [ ] DoraHacks BUIDL 表单提交并拿到 buidl URL
 
 ## 提交命令（开窗后）
