@@ -1,37 +1,32 @@
 # HeadlinePulse
 
-贴一条标题。代理人选 BTC 或 ETH、Up 或 Down，在 **DreamDEX Event Contracts**（Somnia Shannon，`50312`）正在 Trading 的窗口上挂买单。手机宽也能点。
+**A headline in. An Up or Down buy on a live DreamDEX Event Contract.**
 
-Team: **Qidianyan Tech** / **yvzhou142857** / GitHub **Qidianyan**
+News-driven agent + mobile-first Up/Down UI for [Somnia × DreamDEX Event Contracts](https://dorahacks.io/hackathon/event-contracts) on **Shannon** (chain id `50312`).
 
-Contest: [Somnia × DreamDEX Event Contracts Hackathon](https://dorahacks.io/hackathon/event-contracts)
+Team: **Qidianyan Tech** / **yvzhou142857** · GitHub **[Qidianyan/headlinepulse](https://github.com/Qidianyan/headlinepulse)**
 
-下单走 `@somnia-chain/markets-sdk` **0.28.1** 的 Event Contract 盘，不走 DreamDEX 现货 `/v0/markets`。
+**Demo video (2 min 28 sec):** [headlinepulse.mp4](https://github.com/Qidianyan/headlinepulse/releases/download/demo-2026-08-22/headlinepulse.mp4) · [release](https://github.com/Qidianyan/headlinepulse/releases/tag/demo-2026-08-22)
+
+![HeadlinePulse Up/Down UI](demo/ui-screenshot.png)
+
+Not a generic prediction mock. Orders go through `@somnia-chain/markets-sdk` **0.28.1** — not the DreamDEX **spot** HTTP API (`/v0/markets`).
+
+## Why
+
+Traders already have a view from the tape (ETF inflows, hacks, SEC delays). The 15-minute Event Contract window is gone while they translate that view into venue units. HeadlinePulse is the last mile: **marketId, tick, lot, on-chain Trading (1)**.
 
 ## What it does
 
-1. Reads a headline.
-2. Picks BTC or ETH, then **Up** or **Down**.
-3. Selects a live binary window that is **on-chain Trading (status = 1)** and not near expiry.
-4. Snaps probability prices to the venue tick as **integers** (Down = 1 − Up) and size to the lot grid.
-5. Emits a CLOB **buy** intent on the YES or NO tradable. Default path is **dry-run**.
+1. Reads a headline → BTC or ETH, **Up** or **Down**.
+2. Picks a binary window that is **on-chain Trading (status = 1)** and not near expiry.
+3. Snaps Up probability in **(0, 1)** to the tick as integers. **Down = 1 − Up**. Size to the lot grid.
+4. Emits a CLOB **buy** on the YES or NO tradable. Default **dry-run**.
+5. Redeems settled markets from the **Finalized** list (`loadMarkets` has already dropped them). Keys state by **marketId / symbol**, never a recycled pool address.
 
-The same mapper powers the CLI agent and the phone UI.
+CLI and phone UI share the same mapper (`mapNewsToIntent`).
 
-## How to get test STT
-
-Shannon gas token is **STT**. Event Contract collateral on testnet is the faucet **TestUSDC** (6 decimals), not 18-decimal mainnet USDso.
-
-1. Add Somnia Shannon to a wallet: chain id `50312`, RPC `https://api.infra.testnet.somnia.network` (alias `https://dream-rpc.somnia.network`), explorer [shannon-explorer.somnia.network](https://shannon-explorer.somnia.network).
-2. Claim STT from any of:
-   - [testnet.somnia.network](https://testnet.somnia.network/) (official hub)
-   - [Google Cloud Shannon faucet](https://cloud.google.com/application/web3/faucet/somnia/shannon)
-   - [Stakely STT faucet](https://stakely.io/faucet/somnia-testnet-stt)
-   - [thirdweb Shannon faucet](https://thirdweb.com/somnia-shannon-testnet)
-   - Contest Telegram (RULES.md): [t.me/+XHq0F0JXMyhmMzM0](https://t.me/+XHq0F0JXMyhmMzM0) — organizers also send test STT here
-3. For Event Contract collateral, after you have STT, run a live SDK faucet from a funded key (`exchange.trader.faucet()` via `@somnia-chain/markets-sdk` on Shannon). BinaryMarketsModule (same address on testnet and mainnet): `0x3ecC694Cef705358864a646142ac17A90E29e388`. Never hardcode a **market or pool** address — pools are recycled across windows; this app keys state by `marketId` / symbol.
-
-## Run
+## Run (what a judge clones)
 
 ```bash
 npm install
@@ -41,19 +36,30 @@ npm run ui
 ```
 
 - Agent default: fixture markets + **dry-run** (no RPC, no signer).
-- UI: open [http://127.0.0.1:4173/ui/](http://127.0.0.1:4173/ui/) or open `ui/index.html` from disk (`file://` + plain scripts).
-- Live discovery (optional): `npm run discover` or `node src/cli.js --discover` — needs Shannon RPC + the DreamDEX indexer. If the network is blocked, keep dry-run.
-- Live order (optional): copy `.env.example` to `.env`, set `PRIVATE_KEY`, `DRY_RUN=0`, and pass `--live`. Writes still **gate on on-chain status Trading (1)**.
+- UI: [http://127.0.0.1:4173/ui/](http://127.0.0.1:4173/ui/) or open `ui/index.html` from disk (`file://` + plain scripts). Button **吃进这条新闻** reads the tape.
+- Live discovery (optional): `npm run discover` — Shannon RPC + DreamDEX indexer.
+- Live order (optional): `.env` from `.env.example`, `PRIVATE_KEY`, `DRY_RUN=0`, `--live`. Writes still **gate on Trading (1)**.
 
-## Demo
+Paste fields for DoraHacks: [`SUBMISSION.md`](./SUBMISSION.md). Talk track: [`DEMO_SCRIPT.md`](./DEMO_SCRIPT.md). Local copy of the mp4: [`demo/headlinepulse.mp4`](./demo/headlinepulse.mp4).
 
-走查：[`DEMO_SCRIPT.md`](./DEMO_SCRIPT.md)。素材：[`demo/`](./demo/)。
+## How to get test STT
+
+Shannon gas is **STT**. Event Contract collateral on testnet is faucet **TestUSDC** (6 decimals), not 18-decimal mainnet USDso.
+
+1. Add Shannon: chain id `50312`, RPC `https://api.infra.testnet.somnia.network` (alias `https://dream-rpc.somnia.network`), explorer [shannon-explorer.somnia.network](https://shannon-explorer.somnia.network).
+2. Claim STT:
+   - [testnet.somnia.network](https://testnet.somnia.network/)
+   - [Google Cloud Shannon faucet](https://cloud.google.com/application/web3/faucet/somnia/shannon)
+   - [Stakely STT faucet](https://stakely.io/faucet/somnia-testnet-stt)
+   - [thirdweb Shannon faucet](https://thirdweb.com/somnia-shannon-testnet)
+   - Contest Telegram ([RULES.md](./RULES.md)): [t.me/+XHq0F0JXMyhmMzM0](https://t.me/+XHq0F0JXMyhmMzM0)
+3. Collateral: funded key, then `exchange.trader.faucet()` on Shannon. BinaryMarketsModule (same address testnet/mainnet): `0x3ecC694Cef705358864a646142ac17A90E29e388`. Never hardcode a **market or pool** address.
 
 ## Stack
 
 | Piece | Surface |
 | --- | --- |
-| Event Contracts | `@somnia-chain/markets-sdk` `SomniaMarkets` / `isBinaryMarket` / `getMarketOnchain` / `createOrder` / `listPastBinaryMarkets({ status: "Finalized" })` |
+| Event Contracts | `SomniaMarkets` / `isBinaryMarket` / `getMarketOnchain` / `createOrder` / `listPastBinaryMarkets({ status: "Finalized" })` |
 | Chain | Shannon `50312`, indexer `https://dev.smk.somnia.host/v1/graphql` |
 | Agent | `src/cli.js` → `mapNewsToIntent` |
 | UI | `ui/index.html` (no bundler, no `type=module`) |

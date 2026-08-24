@@ -1,6 +1,10 @@
 # Demo assets
 
-`headlinepulse.mp4` 是本机 `npm run ui` 的屏录，约 2 分 28 秒。评委看到的是手机宽 UI：吃进标题、Up/Down、stake、第二条 ETH 新闻。
+Public 2:28 walkthrough (GitHub Release, what DoraHacks should get):
+
+https://github.com/Qidianyan/headlinepulse/releases/download/demo-2026-08-22/headlinepulse.mp4
+
+`headlinepulse.mp4` in this folder is the same screen recording of `npm run ui`: headline in, Up/Down, stake, second ETH news.
 
 本地重录：
 

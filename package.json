@@ -2,7 +2,7 @@
   "name": "headlinepulse",
   "version": "1.0.0",
   "private": true,
-  "description": "HeadlinePulse — 标题进门，DreamDEX Event Contract 上出 Up/Down。",
+  "description": "HeadlinePulse — a headline in, an Up or Down buy on a live DreamDEX Event Contract.",
   "type": "module",
   "main": "src/cli.js",
   "scripts": {
